@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>black jack game </title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Black Jack Game </h1>
+    </div>
+    <div id="display">
+        <div class="holded-cards">
+            <div class="card">
+                <card-t id="Card1" cid="kh" ></card-t>
+                <card-t id="Card2" cid="kh"></card-t>
+                <card-t id="Card3" cid="kh"></card-t>
+            </div>
+        </div>
+        <div class="cards-pack">
+            <h1 id="message">TRY YOUR LUCK HARD</h1>
+            <img id="deck" src="./image/deck.png" alt="deck-image">
+            <button id="Start" onclick="Drawtwo()"> <strong>START </strong></button>
+            <button id="draw-btn" onclick="DrawOneCard()"><strong>Hit a Card</strong></button>
+            <button id="stand-btn" onclick="Stand()"><strong>Stand !</strong></button>
+            <button id="restart-btn" onclick="restart()"><strong>RESTART</strong></button>
+        </div>
+        <div class="comp-card">
+            <div class="card">
+                <card-t id="comp-Card1" cid="00"></card-t>
+                <card-t id="comp-Card2" cid="00"></card-t>
+            </div>
+        </div>
+    </div>
+    <div class="points-table">
+        <table>
+            <tr>
+                <th>
+                    YOUR POINTS
+                </th>
+                <th>
+                    COMPUTERS POINTS
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <h1 id="usr-point">0</h1>
+                </td>
+                <td>
+                    <h1 id="comp-point">0</h1>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="aceChoiceOverlay" class="overlay">
+        <div class="ace-choice-modal">
+            <p>You drew an Ace! Select the value you want :</p>
+            <button onclick="selectAceValue(1)">1</button>
+            <button onclick="selectAceValue(11)">11</button>
+        </div>
+    </div>
+    <script src="elements.cardmeister.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
